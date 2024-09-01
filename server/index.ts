@@ -21,7 +21,10 @@ import cors from 'cors'
 connectDB()
 const app = express()
 
-app.use(cors())
+app.use(cors({
+  credentials: true,
+  origin: ["https://hackathon-client-livid.vercel.app","http:localhost:3000"]
+}))
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(cookieParser())
