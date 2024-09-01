@@ -48,7 +48,10 @@ const server = app.listen(port, () => {
 })
 
 const io = new Server(server,{
-  cors: true,
+origin: port,
+methods: ["GET", "POST"],
+allowedHeaders: ['Access-Control-Allow-Origin'],
+credentials: false
 });
 
 const emailToSocketIdMap = new Map()
