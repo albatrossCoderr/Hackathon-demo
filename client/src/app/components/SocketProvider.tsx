@@ -15,7 +15,7 @@ export const SocketProvider = (props: any) => {
   const socket = useMemo(
     () =>
       io(
-       "https://hackathon-server-gamma.vercel.app",
+       "wss://hackathon-server-gamma.vercel.app",
         {
           withCredentials: true,
         }
