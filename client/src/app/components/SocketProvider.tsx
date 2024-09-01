@@ -15,9 +15,9 @@ export const SocketProvider = (props: any) => {
   const socket = useMemo(
     () =>
       io(
-       "wss://hackathon-server-gamma.vercel.app",
+       "ws://http://3.86.181.161",
         {
-          "transports": ['websocket','polling'],
+          // "transports": ['websocket','polling'],
           withCredentials: true
         }
       ),
