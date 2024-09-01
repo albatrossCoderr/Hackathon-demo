@@ -15,9 +15,7 @@ export const SocketProvider = (props: any) => {
   const socket = useMemo(
     () =>
       io(
-        process.env.NODE_ENV === "production"
-          ? process.env.SOCKET_URL!
-          : "http://localhost:5000"
+       "https://hackathon-server-gamma.vercel.app"
       ),
     []
   );
