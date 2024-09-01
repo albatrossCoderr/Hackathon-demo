@@ -23,7 +23,7 @@ const app = express()
 
 app.use(cors({
   credentials: true,
-  origin: ["https://hackathon-client-livid.vercel.app","http:localhost:3000"],
+  origin: ["https://hackathon-client-livid.vercel.app","http://localhost:3000"],
   methods: ["GET", "POST"]
 }))
 app.use(express.urlencoded({ extended: false }))
