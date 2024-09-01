@@ -17,7 +17,7 @@ export const SocketProvider = (props: any) => {
       io(
        "wss://hackathon-server-gamma.vercel.app",
         {
-          "transports": ['websocket','polling],
+          "transports": ['websocket','polling'],
           withCredentials: true
         }
       ),
