@@ -11,15 +11,11 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: false, message: 'No image provided' }, { status: 400 });
     }
 
-    // Create the tmp directory if it doesn't exist
-    const tempDir = path.join(__dirname, 'tmp');
-    if (!fs.existsSync(tempDir)) {
-      fs.mkdirSync(tempDir);
-    }
+    const tempDir = '/tmp';
+    const tempImagePath = path.join(tempDir, 'input_image.jpg');
 
     // Save the base64 image to a temporary file
     const imageBuffer = Buffer.from(image.replace(/^data:image\/jpeg;base64,/, ''), 'base64');
-    const tempImagePath = path.join(tempDir, 'input_image.jpg');
     fs.writeFileSync(tempImagePath, imageBuffer);
 
     // Call the Python script to process the image
