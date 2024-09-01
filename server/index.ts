@@ -49,7 +49,7 @@ const server = app.listen(port, () => {
 
 const io = new Server(server,{
   cors: {
-      origin: "https://hackathon-client-livid.vercel.app",
+      origin: "https://hackathon-server-gamma.vercel.app",
       methods: ["GET", "POST"],
   }
 });
