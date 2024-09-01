@@ -15,7 +15,7 @@ export const SocketProvider = (props: any) => {
   const socket = useMemo(
     () =>
       io(
-       "ws://3.86.181.161",
+       "https://3.86.181.161.nip.io",
         {
           // "transports": ['websocket','polling'],
           withCredentials: true
